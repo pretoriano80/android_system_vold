@@ -138,7 +138,7 @@ status_t Mount(const std::string& source, const std::string& target, bool ro,
         if (!data.empty()) {
             data += ",";
         }
-        data += "context=u:object_r:media_rw_data_file:s0";
+        data += "context=u:object_r:vfat:s0";
     }
 
     const char* c_source = source.c_str();
