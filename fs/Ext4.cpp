@@ -138,7 +138,7 @@ status_t Mount(const std::string& source, const std::string& target, bool ro,
         if (!data.empty()) {
             data += ",";
         }
-        data = data + "context=" + '\"' + "u:object_r:sdcard_posix:s0:c512,c768" + '\"';
+        data += "context=u:object_r:media_rw_data_file:s0";
     }
 
     const char* c_source = source.c_str();
