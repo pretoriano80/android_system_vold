@@ -64,10 +64,10 @@ status_t Mount(const std::string& source, const std::string& target, bool ro,
 
     sprintf(mountData,
 #ifdef CONFIG_KERNEL_HAVE_EXFAT
-            "noatime,nodev,nosuid,uid=%d,gid=%d,fmask=%o,dmask=%o,%s,%s",
+            "noatime,nodev,nosuid,uid=%d,gid=%d,fmask=%o,dmask=%o,%s,%s,"
             "context=u:object_r:vfat:s0",
 #else
-            "noatime,nodev,nosuid,dirsync,uid=%d,gid=%d,fmask=%o,dmask=%o,%s,%s",
+            "noatime,nodev,nosuid,dirsync,uid=%d,gid=%d,fmask=%o,dmask=%o,%s,%s,"
             "context=u:object_r:vfat:s0",
 #endif
             ownerUid, ownerGid, permMask, permMask,
